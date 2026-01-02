@@ -6,12 +6,12 @@ export default function ContactList() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/contacts")
+      .get("https://contact-management-backend-2-3u86.onrender.com/api/contacts")
       .then((res) => setContacts(res.data));
   }, []);
 
   const deleteHandler = async (id) => {
-    await axios.delete(`http://localhost:5000/api/contacts/${id}`);
+    await axios.delete(`https://contact-management-backend-2-3u86.onrender.com/api/contacts/${id}`);
     setContacts(contacts.filter((c) => c._id !== id));
   };
 

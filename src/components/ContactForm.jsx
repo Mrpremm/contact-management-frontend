@@ -19,7 +19,7 @@ export default function ContactForm() {
     e.preventDefault();
     if (!isValid) return setError("Please fill required fields correctly");
 
-    await axios.post("http://localhost:5000/api/contacts", form);
+    await axios.post("https://contact-management-backend-2-3u86.onrender.com/api/contacts", form);
     setForm({ name: "", email: "", phone: "", message: "" });
     setError("");
     window.location.reload();
